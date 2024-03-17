@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { FlexWrapper } from "../../../../components/FlexWrapper"
 import { LinkProject } from "./LinkProject"
+import { theme } from "../../../../styles/Theme"
 
 
 
@@ -31,7 +32,7 @@ export const Project = (props:ProjectPropsType) => {
 }
 
 const StyledWork = styled.div`
-   background-color: #6ab5db;
+   background-color: ${theme.color.secondaryBg};
    max-width: 373px;
    width:100%;
 

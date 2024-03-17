@@ -90,7 +90,6 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-    background-color: #4b484d;
 `
 
 const Skill = styled.section`

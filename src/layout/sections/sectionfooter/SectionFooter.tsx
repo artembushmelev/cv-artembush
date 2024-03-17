@@ -15,7 +15,7 @@ export const SectionFooter = () => {
       </FlexWrapper>
       <FlexWrapper gap={"20px"}>
         <Links linkId={"githab"} />
-        <Links linkId={"twitter"} />
+        <Links linkId={"twitter"} viewBox=" 6 1 21 31" />
         <Links linkId={"linkid"} />
       </FlexWrapper>
       </FlexWrapper>
@@ -24,7 +24,6 @@ export const SectionFooter = () => {
 };
 
 const SectionFooterStyled = styled.div`
-  background-color: red;
   display: flex;
   justify-content: space-between;
 `;

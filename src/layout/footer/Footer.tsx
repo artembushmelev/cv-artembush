@@ -14,7 +14,6 @@ export const Footer = () => {
 }
 
 const FooterStyled = styled.div`
-    background-color: #ffffff;
     display: flex;
     justify-content: space-between;
 `

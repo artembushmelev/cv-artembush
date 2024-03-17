@@ -20,5 +20,4 @@ export const Contact = () => {
 
 const ContactStyled = styled.div`
     align-items: center;
-    background-color: #353535;
 `
