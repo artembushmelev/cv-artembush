@@ -5,6 +5,7 @@ import { Links } from "../../components/links/Link";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Container } from "../../components/Container";
 import { theme } from "../../styles/Theme";
+import { Logotip } from "../../components/LogoStyled/Logotip";
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"];
 
@@ -14,7 +15,7 @@ export const Header = () => {
       <StyledHeader>
         <Container>
           <FlexWrapper justify="space-between" align="center">
-            <Logo />
+            <Logotip />
             <FlexWrapper gap={"51px"}>
               <Menu menuItems={items} />
               <FlexWrapper gap={"20px"}>

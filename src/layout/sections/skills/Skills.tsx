@@ -3,12 +3,14 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Icon } from "../../../components/icon/Icon";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { SectionText } from "../../../components/SectionText";
+import { Container } from "../../../components/Container";
 
 export const Skills = () => {
   return (
     <StyledSkills>
-      <SectionTitle>My Tech Stack</SectionTitle>
-      <SectionText> Technologies I’ve been working with recently</SectionText>
+      <Container>
+      <SectionTitle fontsize="48px">My Tech Stack</SectionTitle>
+      <SectionText fontsize="32px"> Technologies I’ve been working with recently</SectionText>
       <FlexWrapper wrap={"wrap"} align={"center"} >
         <Skill>
           <Icon
@@ -85,15 +87,18 @@ export const Skills = () => {
           />
         </Skill>
       </FlexWrapper>
+      </Container>
     </StyledSkills>
   );
 };
 
-const StyledSkills = styled.section`
+const StyledSkills = styled.div`
+  padding-top: 170px;
 `
 
-const Skill = styled.section`
+const Skill = styled.div`
     display: flex;
-    gap: 105px;
+    gap: 83px;
     flex-wrap: wrap;
 `
+

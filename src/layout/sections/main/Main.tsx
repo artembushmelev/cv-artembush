@@ -3,7 +3,7 @@ import photo from "../../../assets/images/artem-photo.jpg";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
-import photog from "../../../assets/images/Abstract.png"
+import photog from "../../../assets/images/AbstractNew.png"
 
 export const Main = () => {
   return (
@@ -16,7 +16,9 @@ export const Main = () => {
             <Name>Artem Bushmelev</Name>
             <MainTitle>A Front-End Dev.</MainTitle>
           </div>
-          <Photo src={photo} alt="" />
+            <FhotoWrapper>
+            <Photo src={photo} alt="" />
+            </FhotoWrapper>
         </FlexWrapper>
       </Container>
     </StyledMain>
@@ -26,25 +28,38 @@ export const Main = () => {
 const StyledMain = styled.div`
   min-height: 100vh;
   display: flex;
+  
 `;
+
+const FhotoWrapper = styled.div`
+  position:relative;
+  /* transform: rotate(-180.00deg); */
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url('${photog}');
+    /* Abstract */
+    width: 627.91px;
+    height: 627.91px;
+    left:-140px;
+    top: -146px;
+    transform: rotate(15.00deg);
+    box-sizing: border-box;
+    opacity: 0.25;
+      }
+`
 
 
 
 
 const Photo = styled.img`
-  position: relative;
   width: 349px;
   height: 340px;
   object-fit: cover;
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid rgb(231, 15, 170);
-  &::before {
-    position: absolute;
-    content: "";
-    display:inline-block;
-    background-image: url('${photog}');
-  }
 `;
 
 const MainTitle = styled.h1`

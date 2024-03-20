@@ -25,6 +25,7 @@ const StyledMenu = styled.nav`
   a:hover {
     color: #e7e7e7; /* Цвет ссылки при наведении */
   }
+  
 
   ul {
     display: flex;

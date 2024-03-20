@@ -24,6 +24,9 @@ export const LinkProject = (props:LinkProjectPropsType) => {
 };
 
 const LinkStyledProject = styled.a`
-    color:#FFFFFF;
-
+    color:rgb(167, 167, 167);
+    transition: color 0.3s;
+    &:hover {
+    color: #e7e7e7; /* Цвет ссылки при наведении */
+    }
 `
