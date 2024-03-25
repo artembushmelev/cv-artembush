@@ -2,28 +2,28 @@ import styled from "styled-components";
 import { Logo } from "../../../components/logo/Logo";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { SectionText } from "../../../components/SectionText";
-import { Links } from "../../../components/links/Link";
+import { Link } from "../../../components/links/Link";
 import { Container } from "../../../components/Container";
 import { Logotip } from "../../../components/LogoStyled/Logotip";
+import { LinksHeader } from "../../../components/links/LinksHeader";
+import { LinksFooter } from "../../../components/links/LinksFooter";
+import { theme } from "../../../styles/Theme";
 
 export const SectionFooter = () => {
   return (
-    <SectionFooterStyled>
+    <SectionFooterStyled id="about">
       <Container>
-        <FlexWrapper  justify="space-between">
-              <Logotip />
-                <FlexWrapper  gap={"48px"} justify={"space-between"} align="center" >
-                  <FlexWrapper gap={"33px"}>
-                    <SectionText paddingB="53px" fontsize={"18px"}>+7-912-460-**-**</SectionText>
-                    {/* <SectionText paddingB="53px" fontsize={"18px"}>bushmelevfront@gmail.com</SectionText> */}
-                    <LinkMail href="#">bushmelevfront@gmail.com</LinkMail>
-                  </FlexWrapper>
-                <FlexWrapper gap={"20px"}>
-                    <Links linkId={"githab"} />
-                    <Links linkId={"twitter"} viewBox=" 6 1 21 31" />
-                    <Links linkId={"linkid"} />
-                </FlexWrapper>
-              </FlexWrapper>
+        <FlexWrapper justify="space-between" wrap="wrap" align="center">
+          <Logotip />
+          <FlexWrapper gap={"48px"} justify={"space-between"} wrap="wrap">
+            <FlexWrapper gap={"33px"} align={"center"}>
+              <SectionText paddingB="-2px" fontsize={"18px"}>
+                <a href="#">+7-912-460-**-**</a>
+              </SectionText>
+              <LinkMail href="#">bushmelevfront@gmail.com</LinkMail>
+            </FlexWrapper>
+            <LinksHeader />
+          </FlexWrapper>
         </FlexWrapper>
       </Container>
     </SectionFooterStyled>
@@ -33,32 +33,43 @@ export const SectionFooter = () => {
 const SectionFooterStyled = styled.div`
   display: flex;
   justify-content: space-between;
-  ${Container}{
+
+  ${Container} {
     position: relative;
     &::before {
-    content: "";
-    position:absolute;
-    align-self: flex-end;
-    left: 0;
-    top: 0;
-    right:0;
-    bottom:0;
-    max-width: 1170px;
-    height: 5.68px;
-    border: 2px solid rgb(66, 68, 110);
-    opacity: 0.3;
+      content: "";
+      position: absolute;
+      align-self: flex-end;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      max-width: 1170px;
+      height: 5.68px;
+      border: 2px solid rgb(66, 68, 110);
+      opacity: 0.3;
     }
   }
-  `
-
+  @media ${theme.media.tablet} {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  ${FlexWrapper} {
+    @media ${theme.media.mobile} {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+`;
 
 const LinkMail = styled.a`
-  text-decoration:none;
-  padding-bottom: 53px;
+  text-decoration: none;
+  /* padding-bottom: 53px; */
   font-size: 18px;
-  text-align:center;
-  color: #A7A7A7;
-  font-family: "Poppins",sans-serif;
+  text-align: center;
+  color: #a7a7a7;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 26px;
   letter-spacing: 0px;
@@ -66,4 +77,7 @@ const LinkMail = styled.a`
   &:hover {
     color: #e7e7e7;
   }
-`
+  @media ${theme.media.mobile} {
+      padding-bottom: 30px;
+    }
+`;

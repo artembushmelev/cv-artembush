@@ -4,10 +4,11 @@ import { Icon } from "../../../components/icon/Icon";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { SectionText } from "../../../components/SectionText";
 import { Container } from "../../../components/Container";
+import { theme } from "../../../styles/Theme";
 
 export const Skills = () => {
   return (
-    <StyledSkills>
+    <StyledSkills id="tech Stack">
       <Container>
       <SectionTitle fontsize="48px">My Tech Stack</SectionTitle>
       <SectionText fontsize="32px"> Technologies I’ve been working with recently</SectionText>
@@ -94,11 +95,16 @@ export const Skills = () => {
 
 const StyledSkills = styled.div`
   padding-top: 170px;
+  
 `
 
 const Skill = styled.div`
     display: flex;
     gap: 83px;
     flex-wrap: wrap;
+    @media ${theme.media.tablet} {
+      /* margin-left:40px; */
+      justify-content: space-around;
+    }
 `
 

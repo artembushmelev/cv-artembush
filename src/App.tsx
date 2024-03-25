@@ -8,6 +8,7 @@ import { Projects } from './layout/sections/projects/Projects';
 import { Contact } from './layout/sections/contacts/Contact';
 import { Footer } from './layout/footer/Footer';
 import { SectionFooter } from './layout/sections/sectionfooter/SectionFooter';
+import { GoToBtn } from './components/goTopBtn/GoToBtn';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Contact/>
       <SectionFooter/>
       <Footer/>
+      <GoToBtn/>
     </div>
   );
 }

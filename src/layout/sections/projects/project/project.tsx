@@ -39,6 +39,9 @@ const StyledWork = styled.div`
    border-radius: 20px;
     box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
    width:100%;
+   @media ${theme.media.tablet} {    
+        margin: 0 auto;
+    }
 
 `
 const Image = styled.img`

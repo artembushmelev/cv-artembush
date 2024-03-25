@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { FlexWrapper } from '../../../../components/FlexWrapper'
 import iconsSprite from '../../../../assets/images/iconsSprite/icon-sprite.svg'
+import { theme } from '../../../../styles/Theme'
 
 
 type LinkProjectPropsType = {
@@ -28,5 +29,8 @@ const LinkStyledProject = styled.a`
     transition: color 0.3s;
     &:hover {
     color: #e7e7e7; /* Цвет ссылки при наведении */
+    }
+    @media ${theme.media.tablet} {    
+        font-size:15px;
     }
 `

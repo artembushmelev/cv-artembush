@@ -10,7 +10,7 @@ type LinkPropsType = {
 }
 
 
-export const Links = (props:LinkPropsType) => {
+export const Link = (props:LinkPropsType) => {
     return (
         
         <a href="">

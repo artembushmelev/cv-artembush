@@ -10,10 +10,11 @@ import socialImg4 from "../../../assets/images/proj-4.jpg";
 import socialImg5 from "../../../assets/images/proj-5.jpg";
 import socialImg6 from "../../../assets/images/proj-6.jpg";
 import { Container } from "../../../components/Container";
+import { theme } from "../../../styles/Theme";
 
 export const Projects = () => {
   return (
-    <StyledProjects>
+    <StyledProjects id="projects">
       <Container>
         <SectionTitle fontsize="48px">Projects</SectionTitle>
         <SectionText  paddingB = "113px" fontsize="32px">Things I’ve built so far</SectionText>
@@ -76,5 +77,8 @@ export const Projects = () => {
 const StyledProjects = styled.section`
   /* min-height: 100vh; */
   padding-top: 201px;
+  @media ${theme.media.tablet} {
+    padding-top: 100px;
+  }
   
 `;
